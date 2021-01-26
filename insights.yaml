@@ -1,6 +1,6 @@
 --- 
 - become: true
-  hosts: "{{ host_name }}"
+  hosts: all
   name: Insights Register
   tasks: 
     - name: Install insights client
