@@ -1,0 +1,12 @@
+--- 
+- become: true
+  hosts: "{{ host_name }}"
+  name: Insights Register
+  tasks: 
+    - name: Install insights client
+      yum: 
+        name: insights-client
+        state: latest
+    - name: Register Insights Client
+      shell: 
+        cmd: insights-client --register
